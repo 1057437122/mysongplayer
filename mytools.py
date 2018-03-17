@@ -48,7 +48,7 @@ def set_pause():
 
 def my_log(log_str,log_file='my_log_file.log',print_out=False):
   with open(log_file,'a+') as fp:
-    fp.write(time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime()))
+    fp.write(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     fp.write(':'+str(log_str))
     if(print_out):
       print(str(log_str))
